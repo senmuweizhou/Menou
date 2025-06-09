@@ -1,4 +1,4 @@
-# YOLO-DeepSort
+# yolo-deepsort-lightweight
 
 Efficient Real-time Vehicle Tracking via Lightweight YOLOv5 and DeepSORT Integration
 
