@@ -19,6 +19,7 @@ This project was developed and tested using the following software configuration
 
 
 **Experiment Preparation**  
+All required modules are already integrated. No extra installation is needed. 
 Configure YOLO Project YAML File  
 Modify the dataset and training configuration in the corresponding .yaml file of the YOLO project.  
 Set Up Tracking Model in YOLO_Tracking Project  
