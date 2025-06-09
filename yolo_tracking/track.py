@@ -9,7 +9,7 @@ from yolov5.utils.general import check_img_size, non_max_suppression,  \
 from yolov5.utils.general import scale_boxes
 from yolov5.utils.torch_utils import select_device, time_sync
 from deep_sort_pytorch.utils.parser import get_config
-from deep_sort_pytorch.deep_sort import DeepSort
+from deep_sort_pytorch.djianeep_sort import DeepSort
 import argparse
 import os
 import platform

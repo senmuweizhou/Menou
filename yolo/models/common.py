@@ -859,19 +859,7 @@ class Classify(nn.Module):
             x = torch.cat(x, 1)
         return self.linear(self.drop(self.pool(self.conv(x)).flatten(1)))
 
-from models.rghostnext import RepGhostBottleneck
-class RepGhostNeXt(nn.Module):
-    # RepGhostNeXt Bottleneck
-    def __init__(self, c1, c2, n=1, shortcut=True, g=1, e=0.5):  # ch_in, ch_out
-        super().__init__()
-        self.c_ = int(c2 * e)  # hidden channels
-        self.conv1 = Conv(c1, 2 * self.c_, 1, 1)
-        self.conv2 = Conv(2 * self.c_, c2, 1)
-        # attention mechanism can be used
-        self.m = nn.Sequential(*(RepGhostBottleneck(self.c_, self.c_, self.c_) for _ in range(n)))
-    def forward(self, x):
-        d1, d2 = self.conv1(x).split((self.c_, self.c_), 1)
-        return self.conv2(torch.cat((self.m(d1), d2), 1))
+
 
 import torch.nn.functional as F
 # ScConv
